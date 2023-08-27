@@ -180,7 +180,13 @@ img {
     url(../img/nosotros.jpg);
   background-position: center, top left;
   background-repeat: no-repeat;
-  background-size: 100%, 70rem;
+  background-size: 100%, 95rem;
+}
+@media (min-width: 380px) {
+    .sobre-nosotros {
+      background-position: center, top left;
+      background-size: 100%, 75rem;
+    }
 }
 @media (min-width: 768px) {
   .sobre-nosotros {
