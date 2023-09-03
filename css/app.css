@@ -116,10 +116,24 @@ img {
   }
 }
 .nav-principal a {
-  transition: color 0.3s ease-out;
+  padding: 0.5rem 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transition: all 0.3s ease-out;
 }
 .nav-principal a:hover {
   color: #037bc0;
+  border-bottom: 0.1rem solid #e1e1e1;
+}
+@media (min-width: 768px) {
+    .nav-principal a:hover {
+      border-bottom: 0.5rem solid #e1e1e1;
+    }
+}
+.nav-principal a.active {
+  color: #037bc0;
+  font-weight: 700;
+  border-bottom: 0.5rem solid #037bc0;
 }
 .hero {
   background-image: url(../img/principal.jpg);
@@ -154,14 +168,25 @@ img {
   text-align: center;
   padding: 2rem;
   font-size: 2rem;
+  background-color: rgb(3 123 192 / 0.15);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 .categoria a:hover {
   color: #fff;
   background-color: #037bc0;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  transition: background-color 0.3s ease-out;
 }
 @media (min-width: 768px) {
+  .categoria a:hover {
+    color: #fff;
+    background-color: #037bc0;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    transition: background-color 0.3s ease-out;
+  }
   .listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -180,11 +205,15 @@ img {
     url(../img/nosotros.jpg);
   background-position: center, top left;
   background-repeat: no-repeat;
-  background-size: 100%, 95rem;
+  background-size: 100%, 120rem;
+}
+@media (min-width: 320px) {
+    .sobre-nosotros {
+      background-size: 100%, 95rem;
+    }
 }
 @media (min-width: 380px) {
     .sobre-nosotros {
-      background-position: center, top left;
       background-size: 100%, 75rem;
     }
 }
@@ -475,4 +504,8 @@ aside h3 {
   flex: 1;
   border: 0.1rem solid #e1e1e1;
   padding: 1rem;
+}
+.campo input:not([type="radio"]),
+.campo textarea {
+  width: 0;
 }
