@@ -246,7 +246,12 @@ img {
 .texto-nosotros {
   grid-row: 2 / 3;
   color: #fff;
-  padding: 5rem;
+  padding: 1rem;
+}
+@media (min-width: 240px) {
+    .texto-nosotros {
+      padding: 5rem;
+    }
 }
 @media (min-width: 768px) {
   .texto-nosotros {
@@ -372,9 +377,14 @@ img {
 .copyright {
   margin-top: 8rem;
   margin-bottom: 0;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   font-weight: 700;
   background-color: #e1e1e1;
+}
+@media (min-width: 320px) {
+    .copyright {
+      padding: 2rem 2rem;
+    }
 }
 
 /*** PÁGINAS INTERNAS ***/
